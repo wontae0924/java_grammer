@@ -81,9 +81,11 @@ public class C02Variable {
 //        선언과 동시에 초기화
         int a1 = 10;
         a1 = 20;
-//        선언만 한 뒤에 나중에 초기화
-        int a2;
+        int a2; //지역변수는 선언만 됐을때는 값이 0으로 초기화되지 않으나, 객체로 선언될떄는 0으로 초기화
         a2 =20;
+//        객체로 만들때는 0으로 초기화
+        int [] arr = new int[5];
+        System.out.println(arr[0]);
 //        상수는 값의 재할당이 불가능
         final int ages = 20;
 //        상수는 값의 변경이 불가능 -> ages = 30; 에러발생
