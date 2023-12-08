@@ -17,12 +17,13 @@ public class C06String {
         int d = b.intValue();
 //        오토 박싱
         Integer e = a;
-//        박싱
+//        박싱0
         Integer f = Integer.valueOf(a);*/
 
 /*//        String과 Int의 형변환
         int a =10;
         String st_a = Integer.toString(a);//숫자 10을  "10" 문자열로 변환
+        String st_a2 = String.valueOf(a);
         int c = Integer.parseInt(st_a);//문자 "10"을 숫자 10로 변환
 
 //        참조자료형에 원시자료형을 담을 떄는 wrapper클래스를 써야한다. ex)컬렉션프레암워크(List,set)
@@ -154,7 +155,7 @@ public class C06String {
         String b = "a b  c d";
         String[] stArr2 = b.split("\\s+"); // 공백분리
         System.out.println(Arrays.toString(stArr2));*/
-//        isEmpty() null 구분
+/*//        isEmpty() null 구분
         String st1 =null;
         String st2 = "";
         System.out.println(st1 == null);
@@ -164,8 +165,58 @@ public class C06String {
         System.out.println(st1.isEmpty());
         String[] arr = new String[5];
         arr[0] = "hello";
-        arr[1] = "world";
+        arr[1] = "world";*/
 
+/*//        join
+        String[] arr ={"JAVA", "JS", "C"};
+        String  pl = String.join(" " , arr);
+        System.out.println(pl);*/
+
+/*//        StringBuffer : 문자열을 추가하거나 변결 할 때 주로 사용
+//        append(추가) insert(삽입) substring(자르기) delete(삭제) 등이 있다.
+        StringBuffer sb1 = new StringBuffer("hello");
+        System.out.println(sb1);
+        sb1.append(" world");
+        System.out.println(sb1);
+        sb1.insert(5, " java");
+        System.out.println(sb1);
+        System.out.println(sb1.substring(6,10));
+        sb1.delete(6,11);
+        System.out.println(sb1);*/
+
+////        성능 : String < StringBuffer < StringBuilder (스레트 safe X)
+//        StringBuilder sb2 =new StringBuilder("hello");
+//        sb2.append(" world");
+//        System.out.println(sb2);
+      /*  StringBuffer my_string = new StringBuffer("hello");
+        StringBuilder answer = new StringBuilder();
+        int n = 3;
+        for (int i =0 ; i < my_string.length(); i++){
+            for (int j = 0;j < n; j++){
+                answer.append(my_string.substring(i, i + 1));
+            }
+        }
+        System.out.println(answer);*/
+
+//        StringBuffer a = new StringBuffer("hello");
+//        StringBuffer b = new StringBuffer("lohel");
+
+//        int answer = 0;
+//
+//        for (int i = 1; i < a.length(); i++){
+//            a.insert(0, a.charAt(a.length()-1));
+//            a.delete(a.length()-1 , a.length());
+//            if(a.toString().equals(b.toString())){
+//                answer = i;
+//                break;
+//            }else {
+//                answer = -1;
+//            }
+//        }
+//        System.out.println(a);
+//        System.out.println(b);
+//        System.out.println(a.toString().equals(b.toString()));
+//        System.out.println(answer);
     }
 
 }
